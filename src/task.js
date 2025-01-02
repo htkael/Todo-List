@@ -4,5 +4,10 @@ export class Task {
     this.desc = desc;
     this.dueDate = dueDate;
     this.priority = priority;
+    this.completed = false;
+  }
+
+  toggleComplete() {
+    this.completed = !this.completed;
   }
 }
