@@ -2,8 +2,8 @@ import { createTaskCard, content } from "./createTaskCard";
 
 export const displayTasks = (project) => {
   content.innerHTML = "";
-  if (project && project.tasks) {
-    project.tasks.forEach((task) => createTaskCard(task));
+  if (project.tasks.length > 0) {
+    project.tasks.forEach((task) => createTaskCard(task, project));
   } else {
     const noTasksMessage = document.createElement("div");
     noTasksMessage.textContent = "No tasks available for this project.";

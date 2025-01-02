@@ -1,5 +1,5 @@
 export const content = document.querySelector(".taskList");
-export const createTaskCard = (task) => {
+export const createTaskCard = (task, project) => {
   const taskCard = document.createElement("div");
   taskCard.className = "task-card";
   const complete = document.createElement("input");
