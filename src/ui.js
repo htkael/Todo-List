@@ -17,6 +17,7 @@ export const displayProjects = () => {
 
     const projectName = project.name;
     const newDelete = document.createElement("button");
+    newDelete.textContent = "Delete Project";
     newProject.append(newDelete);
     newDelete.addEventListener("click", () => {
       removeProject(projectName);

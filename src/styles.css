@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-columns: 1fr 4fr;
+  height: 100%;
+}
+
+#header {
+  grid-column: 1/-1;
+  background-color: #f9a8d4;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #eff6ff;
+}
+
+.sidebar {
+  background-color: #eeeded;
+  border-right: 1px solid rgba(0, 0, 0, 0.24);
+  padding: 4rem;
+  font-size: 2rem;
+  font-weight: 100;
+  display: grid;
+  grid-template-rows: 10fr 1fr;
+}
+
+#projects {
+  display: grid;
+  grid-template-rows: 75px 1fr;
+}
+
+.projectList {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-rows: repeat(1fr);
+}
+
+.main {
+  background-color: #fafafa;
+}
+
+.taskList {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 50px);
+  gap: 1rem;
+  justify-items: center;
+  padding: 2.5rem;
+}
+
+#addTask {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 16rem;
+  height: 75px;
+  width: 75px;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #f9a8d4;
+  color: white;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+#addTask:hover {
+  box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.432);
+}
+
+.task-card {
+  background-color: #eeeded;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}

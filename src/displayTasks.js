@@ -1,4 +1,4 @@
-const content = document.querySelector(".main");
+const content = document.querySelector(".taskList");
 
 export const displayTasks = (project) => {
   content.innerHTML = "";
@@ -26,7 +26,8 @@ export const displayTasks = (project) => {
     content.append(noTasksMessage);
   }
   const newTaskBtn = document.createElement("button");
-  newTaskBtn.textContent = "Add Task";
+  newTaskBtn.textContent = "+";
+  newTaskBtn.id = "addTask";
   content.append(newTaskBtn);
   newTaskBtn.addEventListener("click", () => project.addTask());
 };
