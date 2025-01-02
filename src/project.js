@@ -1,4 +1,5 @@
 import { Task } from "./task";
+import { displayTasks } from "./displayTasks";
 
 export class Project {
   constructor(name) {
@@ -13,6 +14,7 @@ export class Project {
     const priority = prompt("Priority?");
     const task = new Task(taskName, desc, dueDate, priority);
     this.tasks.push(task);
+    displayTasks(this);
     console.log(`Added: ${task}`);
   }
 
@@ -21,16 +23,7 @@ export class Project {
     if (index !== -1) {
       this.tasks.splice(index, 1);
       console.log(`Removed: ${task}`);
-    } else {
-      console.log(`${item} not found`);
-    }
-  }
-
-  displayTasks() {
-    if (this.tasks.length > 0) {
-      console.log(`Items in array: ${this.tasks}`);
-    } else {
-      console.log("No tasks in project");
+      displayTasks(this);
     }
   }
 }

@@ -1,3 +1,4 @@
+import { displayTasks } from "./displayTasks";
 import { Project } from "./project";
 import { displayProjects } from "./ui";
 
@@ -8,6 +9,7 @@ export const addProject = () => {
   const newProject = new Project(name);
   projects.push(newProject);
   displayProjects();
+  displayTasks(newProject);
   console.log(newProject);
 };
 
