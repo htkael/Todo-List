@@ -1,9 +1,10 @@
-import { projects, removeProject } from "./addProject";
+import { myProjectManager } from ".";
 import { displayTasks } from "./displayTasks";
 
 const projectList = document.querySelector(".projectList");
 
 export const displayProjects = () => {
+  const projects = myProjectManager.projects;
   projectList.innerHTML = "";
   projects.forEach((project) => {
     const newProject = document.createElement("div");
@@ -20,7 +21,7 @@ export const displayProjects = () => {
     newDelete.textContent = "Delete Project";
     newProject.append(newDelete);
     newDelete.addEventListener("click", () => {
-      removeProject(projectName);
+      myProjectManager.removeProject(projectName);
     });
 
     projectList.append(newProject);

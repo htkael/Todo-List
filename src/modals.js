@@ -13,6 +13,9 @@ export const displayTaskModal = () => {
   taskModal.style.display = "grid";
 };
 
+export const closeModal = () => {
+  taskModal.style.display = "none";
+};
 export const closeProjectModal = (event) => {
   const target = event.target;
   if (

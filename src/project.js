@@ -1,21 +1,32 @@
 import { Task } from "./task";
 import { displayTasks } from "./displayTasks";
 
+const taskName = document.querySelector("#taskName");
+const taskDesc = document.querySelector("#taskDesc");
+const taskDate = document.querySelector("#taskDate");
+const taskPriority = document.querySelector("#taskPriority");
+
 export class Project {
   constructor(name) {
     this.name = name;
     this.tasks = [];
   }
 
-  addTask() {
-    const taskName = prompt("Name?");
-    const desc = prompt("Description?");
-    const dueDate = prompt("Due Date?");
-    const priority = prompt("Priority?");
-    const task = new Task(taskName, desc, dueDate, priority);
+  addTask(event) {
+    event.preventDefault();
+    const task = new Task(
+      taskName.value,
+      taskDesc.value,
+      taskDate.value,
+      taskPriority.value
+    );
     this.tasks.push(task);
-    displayTasks(this);
+    (taskName.value = ""),
+      (taskDesc.value = ""),
+      (taskDate.value = ""),
+      (taskPriority.value = "");
     console.log(`Added: ${task}`);
+    console.log(this);
   }
 
   removeTask(task) {

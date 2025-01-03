@@ -1,9 +1,13 @@
 import { createTaskCard, content } from "./createTaskCard";
 import { displayTaskModal } from "./modals";
+import { myProjectManager } from ".";
 
 export const displayTasks = (project) => {
   content.innerHTML = "";
-  if (project.tasks.length > 0) {
+  if (project && project.tasks.length > 0) {
+    console.log("Resetting tasks");
+    console.log(project);
+    console.log(myProjectManager);
     project.tasks.forEach((task) => createTaskCard(task, project));
   } else {
     const noTasksMessage = document.createElement("div");

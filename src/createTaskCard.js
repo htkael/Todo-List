@@ -9,8 +9,8 @@ export const createTaskCard = (task, project) => {
   const dueDate = document.createElement("div");
   const removeTask = document.createElement("button");
   removeTask.textContent = "Remove Task";
-  name.textContent = task.name;
-  dueDate.textContent = `Due: ${task.dueDate}`;
+  name.textContent = task.taskName;
+  dueDate.textContent = `Due: ${task.taskDate}`;
   taskCard.append(complete);
   taskCard.append(name);
   taskCard.append(dueDate);
