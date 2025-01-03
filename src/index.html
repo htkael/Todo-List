@@ -21,5 +21,43 @@
         <div class="taskList"></div>
       </div>
     </div>
+    <div id="projectModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="close">&times;</span>
+        <div id="modalProjectGrid">
+          <h2>Enter Project Name</h2>
+          <form id="projectForm">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" required />
+            <button type="submit">Submit</button>
+            <button class="closeButton" id="closeButton">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div id="taskModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="closeTwo">&times;</span>
+        <div id="modalTaskGrid">
+          <h2>Enter Task Details</h2>
+          <form id="taskForm">
+            <label for="taskName">Name:</label>
+            <input type="text" id="taskName" required />
+            <label for="taskDesc">Description:</label>
+            <input type="text" id="taskDesc" />
+            <label for="taskDate">Due Date:</label>
+            <input type="date" id="taskDate" required />
+            <label for="taskPriority">Priority:</label>
+            <select name="projectForm" id="taskPriority">
+              <option value="low">Low</option>
+              <option value="medium">medium</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button class="closeButton" id="closeButtonTwo">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

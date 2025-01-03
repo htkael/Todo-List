@@ -2,10 +2,15 @@ import { displayTasks } from "./displayTasks";
 import { Project } from "./project";
 import { displayProjects } from "./ui";
 
+const modal = document.querySelector("#projectModal");
 export const projects = [];
 
-export const addProject = () => {
-  const name = prompt("Project Name?");
+export const addProject = (event) => {
+  event.preventDefault();
+  const projectName = document.querySelector("#projectName");
+  const name = projectName.value;
+  projectName.value = "";
+  modal.style.display = "none";
   const newProject = new Project(name);
   projects.push(newProject);
   displayProjects();

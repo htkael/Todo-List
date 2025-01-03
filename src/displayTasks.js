@@ -1,4 +1,5 @@
 import { createTaskCard, content } from "./createTaskCard";
+import { displayTaskModal } from "./modals";
 
 export const displayTasks = (project) => {
   content.innerHTML = "";
@@ -13,5 +14,5 @@ export const displayTasks = (project) => {
   newTaskBtn.textContent = "+";
   newTaskBtn.id = "addTask";
   content.append(newTaskBtn);
-  newTaskBtn.addEventListener("click", () => project.addTask());
+  newTaskBtn.addEventListener("click", () => displayTaskModal());
 };
