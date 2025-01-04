@@ -25,15 +25,12 @@ export class Project {
       (taskDesc.value = ""),
       (taskDate.value = ""),
       (taskPriority.value = "");
-    console.log(`Added: ${task}`);
-    console.log(this);
   }
 
   removeTask(task) {
     const index = this.tasks.indexOf(task);
     if (index !== -1) {
       this.tasks.splice(index, 1);
-      console.log(`Removed: ${task}`);
       displayTasks(this);
     }
   }

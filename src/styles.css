@@ -115,6 +115,31 @@ body {
   grid-template-columns: 1fr;
 }
 
+#taskCard {
+  display: grid;
+  gap: 2rem;
+}
+
+.task-card:hover {
+  box-shadow: 2px 0px 8px 1px rgba(0, 0, 0, 0.247);
+}
+
+.taskName {
+  text-align: center;
+  border-bottom: solid black;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.taskCompleted {
+  font-weight: bold;
+}
+
+.headerName {
+  font-weight: bold;
+}
+
 .modalContent {
   background-color: #fefefe;
   padding: 20px;
@@ -160,4 +185,30 @@ form > button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.low {
+  border-left: 5px solid rgb(2, 94, 2);
+}
+
+.medium {
+  border-left: 5px solid rgb(255, 208, 0);
+}
+
+.high {
+  border-left: 5px solid rgb(201, 6, 6);
+}
+
+.removeButton {
+  width: 22px;
+  border-radius: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border: solid red;
+}
+
+.removeButton:hover {
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.301);
 }

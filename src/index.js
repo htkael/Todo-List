@@ -5,6 +5,7 @@ import {
   closeProjectModal,
   closeTaskModal,
   closeModal,
+  closeTaskCardModal,
 } from "./modals";
 import { displayProjects } from "./ui";
 import { displayTasks } from "./displayTasks";
@@ -23,6 +24,7 @@ addProjectBtn.addEventListener("click", () => {
 window.addEventListener("click", () => {
   closeProjectModal(event);
   closeTaskModal(event);
+  closeTaskCardModal(event);
 });
 
 projectForm.addEventListener("submit", () => {
