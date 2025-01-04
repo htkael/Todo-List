@@ -152,7 +152,8 @@ body {
 }
 
 #modalProjectGrid,
-#modalTaskGrid {
+#modalTaskGrid,
+#editTaskGrid {
   display: grid;
 }
 
@@ -162,7 +163,8 @@ body {
   justify-content: start;
 }
 
-#taskForm {
+#taskForm,
+#editTaskForm {
   display: grid;
   gap: 1rem;
   justify-content: start;
@@ -210,5 +212,22 @@ form > button {
 }
 
 .removeButton:hover {
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.301);
+}
+
+.edit {
+  background-color: #84cc16;
+  border: none;
+  min-width: 75px;
+  height: 30px;
+  align-self: flex-end;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit:hover {
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.301);
 }

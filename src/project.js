@@ -18,7 +18,8 @@ export class Project {
       taskName.value,
       taskDesc.value,
       taskDate.value,
-      taskPriority.value
+      taskPriority.value,
+      this
     );
     this.tasks.push(task);
     (taskName.value = ""),

@@ -59,6 +59,30 @@
         </form>
       </div>
     </div>
+    <div id="editTaskModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="closeFour">&times;</span>
+        <div id="editTaskGrid">
+          <h2>Enter Task Details</h2>
+          <form id="editTaskForm">
+            <label for="editTaskName">Name:</label>
+            <input type="text" id="editTaskName" required />
+            <label for="editTaskDesc">Description:</label>
+            <input type="text" id="editTaskDesc" />
+            <label for="editTaskDate">Due Date:</label>
+            <input type="date" id="editTaskDate" required />
+            <label for="editTaskPriority">Priority:</label>
+            <select name="projectForm" id="editTaskPriority">
+              <option value="low">Low</option>
+              <option value="medium">medium</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button class="closeButton" id="closeButtonThree">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
     <div id="taskCardModal" class="modal">
       <div class="modalContent">
         <span class="close" id="closeThree">&times;</span>
@@ -76,7 +100,8 @@
             <div class="headerName">Priority:</div>
             <div class="taskPriority">High</div>
           </div>
-      </div>
+          <button class="edit">Edit</button>
+        </div>
     </div>
   </body>
 </html>

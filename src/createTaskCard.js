@@ -18,8 +18,9 @@ export const createTaskCard = (task, project) => {
   complete.addEventListener("click", () => {
     task.toggleComplete();
   });
-  removeTask.addEventListener("click", () => {
+  removeTask.addEventListener("click", (event) => {
     project.removeTask(task);
+    event.stopPropagation();
   });
   content.append(taskCard);
   taskCard.addEventListener("click", () => {
