@@ -7,3 +7,12 @@ export const checkPriority = (priority, taskCard) => {
     taskCard.classList.add("high");
   }
 };
+
+export const checkComplete = (complete, taskCard) => {
+  console.log(complete);
+  if (complete === true) {
+    taskCard.classList.add("completed");
+  } else {
+    taskCard.classList.remove("completed");
+  }
+};

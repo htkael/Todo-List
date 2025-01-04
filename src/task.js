@@ -1,3 +1,5 @@
+import { saveToLocalStorage } from ".";
+
 export class Task {
   constructor(taskName, taskDesc, taskDate, taskPriority, project) {
     this.taskName = taskName;
@@ -10,6 +12,7 @@ export class Task {
 
   toggleComplete() {
     this.completed = !this.completed;
+    saveToLocalStorage;
   }
 
   editTaskInfo(editTaskName, editTaskDesc, editTaskDate, editTaskPriority) {
@@ -17,5 +20,16 @@ export class Task {
     this.taskDesc = editTaskDesc;
     this.taskDate = editTaskDate;
     this.taskPriority = editTaskPriority;
+    saveToLocalStorage();
+  }
+
+  toJSON() {
+    return {
+      taskName: this.taskName,
+      taskDesc: this.taskDesc,
+      taskDate: this.taskDate,
+      taskPriority: this.taskPriority,
+      completed: this.completed,
+    };
   }
 }

@@ -1,6 +1,7 @@
 import { createElement } from "./utils";
-import { checkPriority } from "./priority";
+import { checkComplete, checkPriority } from "./priority";
 import { displayTaskCard } from "./modals";
+import { displayTasks } from "./displayTasks";
 
 export const content = document.querySelector(".taskList");
 export const createTaskCard = (task, project) => {
@@ -15,8 +16,10 @@ export const createTaskCard = (task, project) => {
   taskCard.append(name);
   taskCard.append(dueDate);
   taskCard.append(removeTask);
-  complete.addEventListener("click", () => {
+  complete.addEventListener("click", (event) => {
+    event.stopPropagation();
     task.toggleComplete();
+    displayTasks(project);
   });
   removeTask.addEventListener("click", (event) => {
     project.removeTask(task);
@@ -27,4 +30,5 @@ export const createTaskCard = (task, project) => {
     displayTaskCard(task);
   });
   checkPriority(task.taskPriority, taskCard);
+  checkComplete(task.completed, taskCard);
 };
