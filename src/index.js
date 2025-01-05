@@ -9,7 +9,7 @@ import {
   closeEditTaskModal,
 } from "./modals";
 import { displayProjects } from "./ui";
-import { displayTasks } from "./displayTasks";
+import { clearTaskDisplay, displayTasks } from "./displayTasks";
 import { Project } from "./project";
 import { Task } from "./task";
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadFromLocalStorage();
   displayProjects();
   currentProject = myProjectManager.projects[0];
-  displayTasks(currentProject);
+  clearTaskDisplay();
 });
 
 addProjectBtn.addEventListener("click", () => {
