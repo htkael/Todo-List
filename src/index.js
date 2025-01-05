@@ -14,19 +14,23 @@ import { Project } from "./project";
 import { Task } from "./task";
 
 export const myProjectManager = new projectManager();
-const myProjects = myProjectManager.projects;
+let myProjects = myProjectManager.projects;
 console.log(myProjects);
 
 const addProjectBtn = document.querySelector("#addProject");
 const projectForm = document.querySelector("#projectForm");
 const taskForm = document.querySelector("#taskForm");
 
-let currentProject = myProjects[0];
+let currentProject;
+export const setCurrentProject = (project) => {
+  currentProject = project;
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   loadFromLocalStorage();
   displayProjects();
-  displayTasks();
+  currentProject = myProjectManager.projects[0];
+  displayTasks(currentProject);
 });
 
 addProjectBtn.addEventListener("click", () => {
@@ -44,7 +48,6 @@ projectForm.addEventListener("submit", () => {
   currentProject = myProjectManager.addProject(event);
   displayProjects();
   displayTasks(currentProject);
-  console.log(currentProject);
 });
 
 taskForm.addEventListener("submit", (event) => {
@@ -53,11 +56,6 @@ taskForm.addEventListener("submit", (event) => {
     displayTasks(currentProject);
     closeModal();
   }
-  document.addEventListener("DOMContentLoaded", () => {
-    loadFromLocalStorage();
-    displayProjects();
-    displayTasks();
-  });
 });
 
 export const saveToLocalStorage = () => {

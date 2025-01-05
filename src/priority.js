@@ -9,7 +9,6 @@ export const checkPriority = (priority, taskCard) => {
 };
 
 export const checkComplete = (complete, taskCard) => {
-  console.log(complete);
   if (complete === true) {
     taskCard.classList.add("completed");
   } else {

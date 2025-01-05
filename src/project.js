@@ -22,6 +22,7 @@ export class Project {
       taskPriority.value,
       this
     );
+    console.log(this);
     this.tasks.push(task);
     saveToLocalStorage();
     taskName.value = "";

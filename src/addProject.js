@@ -1,6 +1,6 @@
 import { Project } from "./project";
 import { displayProjects } from "./ui";
-import { displayTasks } from "./displayTasks";
+import { clearTaskDisplay, displayTasks } from "./displayTasks";
 import { saveToLocalStorage } from ".";
 import { Task } from "./task";
 
@@ -46,8 +46,7 @@ export class projectManager {
     );
     this.projects[index].tasks = [];
     this.projects.splice(index, 1);
+    console.log(`Removed project: ${projectName}`);
     saveToLocalStorage();
-    displayProjects();
-    displayTasks(this.projects[index]);
   }
 }
