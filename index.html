@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="body">
+      <header id="header">
+        <div>To Do List</div>
+      </header>
+      <div class="sidebar">
+        <div id="projects">
+          <div>Projects</div>
+          <ul class="projectList"></ul>
+        </div>
+        <button id="addProject">Add Project</button>
+      </div>
+      <div class="main">
+        <div class="taskList"></div>
+      </div>
+    </div>
+    <div id="projectModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="close">&times;</span>
+        <div id="modalProjectGrid">
+          <h2>Enter Project Name</h2>
+          <form id="projectForm">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" required />
+            <button type="submit">Submit</button>
+            <button class="closeButton" id="closeButton">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div id="taskModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="closeTwo">&times;</span>
+        <div id="modalTaskGrid">
+          <h2>Enter Task Details</h2>
+          <form id="taskForm">
+            <label for="taskName">Name:</label>
+            <input type="text" id="taskName" required />
+            <label for="taskDesc">Description:</label>
+            <input type="text" id="taskDesc" />
+            <label for="taskDate">Due Date:</label>
+            <input type="date" id="taskDate" required />
+            <label for="taskPriority">Priority:</label>
+            <select name="projectForm" id="taskPriority">
+              <option value="low">Low</option>
+              <option value="medium">medium</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button class="closeButton" id="closeButtonTwo">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div id="editTaskModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="closeFour">&times;</span>
+        <div id="editTaskGrid">
+          <h2>Enter Task Details</h2>
+          <form id="editTaskForm">
+            <label for="editTaskName">Name:</label>
+            <input type="text" id="editTaskName" required />
+            <label for="editTaskDesc">Description:</label>
+            <input type="text" id="editTaskDesc" />
+            <label for="editTaskDate">Due Date:</label>
+            <input type="date" id="editTaskDate" required />
+            <label for="editTaskPriority">Priority:</label>
+            <select name="projectForm" id="editTaskPriority">
+              <option value="low">Low</option>
+              <option value="medium">medium</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button class="closeButton" id="closeButtonThree">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div id="taskCardModal" class="modal">
+      <div class="modalContent">
+        <span class="close" id="closeThree">&times;</span>
+        <div id="taskCard">
+          <h2 class="taskName">Task One</h2>
+          <div class="cardInfo">
+            <div class="headerName">Description:</div>
+            <div class="taskDesc"> This is a general description of the task. It should be filled with some words maybe about this long.</div>
+          </div>
+          <div class="cardInfo">
+            <div class="headerName">Due:</div>
+            <div class="taskDate">2004-04-07</div>
+          </div>
+          <div class="cardInfo">
+            <div class="headerName">Priority:</div>
+            <div class="taskPriority">High</div>
+          </div>
+          <button class="edit">Edit</button>
+        </div>
+    </div>
+  </body>
+</html>
