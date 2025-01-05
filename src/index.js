@@ -10,8 +10,6 @@ import {
 } from "./modals";
 import { displayProjects } from "./ui";
 import { clearTaskDisplay, displayTasks } from "./displayTasks";
-import { Project } from "./project";
-import { Task } from "./task";
 
 export const myProjectManager = new projectManager();
 let myProjects = myProjectManager.projects;

@@ -1,6 +1,5 @@
 import { Project } from "./project";
-import { displayProjects } from "./ui";
-import { clearTaskDisplay, displayTasks } from "./displayTasks";
+
 import { saveToLocalStorage } from ".";
 import { Task } from "./task";
 
